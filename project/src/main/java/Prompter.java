@@ -1,4 +1,4 @@
-import java.io.Console;
+//import java.io.Console;
 import java.util.Scanner;
 
 public class Prompter {
@@ -7,23 +7,25 @@ public class Prompter {
   private String[] gameQuestions = {"What type of item?", "What is the maximum amount of items?"};
   public String gameItem;
   public int maxQuantity;
-  Console console = System.console();
+  //Console console = System.console();
   Scanner scanner = new Scanner(System.in);
   
   public Prompter() {
     System.out.println("How many are in the jar by: James Han\n");
-    System.out.printf("ADMINISTRATOR\n========================\n");
+    System.out.printf("ADMINISTRATOR\n========================\n\n");
     System.out.println("What type of item?");
-    gameItem = console.readLine();
+    //gameItem = console.readLine();
+    gameItem = scanner.nextLine();
     System.out.printf("What is the maximum amount of %s?\n", gameItem);
-    maxQuantity = Integer.parseInt(console.readLine());
-    System.out.println("PLAYER\n========================\n");
+    maxQuantity = scanner.nextInt();
+    //maxQuantity = Integer.parseInt(console.readLine());
+    System.out.println("PLAYER\n========================\n\n");
     System.out.printf("How many %s(s) are in the jar? Pick a number between 1 and %d\n",
                       gameItem, maxQuantity); 
   }
   
   public int getGuess() {
-    int guess = scanner.nextByte();
+    int guess = scanner.nextInt();
     return guess;
   }
   

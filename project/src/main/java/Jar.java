@@ -5,7 +5,7 @@ public class Jar {
   
   //private static final int MIN = 1; 
   public int actualQuantity;
-  public String gameItem;
+  private String gameItem;
   private Random random = new Random();
   private int maxQuantity;
   // Jar object
